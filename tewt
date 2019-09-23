@@ -1,0 +1,5 @@
+- Add nodejs executable property 
+- Add exclusions 
+- Install Plugins : Utility steps, gitlab, httprequest 
+- Add git usr/bin to path 
+- Reconnect slave & echo %PATH%
