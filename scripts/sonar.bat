@@ -6,8 +6,9 @@ set projectKey=%2
 set projectName=%3
 set projectVersion=%4
 set branchName=%5
+set workspace=%6
 
-%pathSonarQubeExe% begin /k:"%projectKey%" /n:"%projectName%" /v:"%projectVersion%" /d:sonar.scanner.metadataFilePath="report-task.txt" /d:sonar.nodejs.executable=%nodeJsExe% /d:sonar.host.url="http://67.207.94.110:9000" /d:sonar.login="admin" /d:sonar.password="admin" 
+%pathSonarQubeExe% begin /k:"%projectKey%" /n:"%projectName%" /v:"%projectVersion%" /d:sonar.scanner.metadataFilePath="%workspace%\report-task.txt" /d:sonar.nodejs.executable=%nodeJsExe% /d:sonar.host.url="http://67.207.94.110:9000" /d:sonar.login="admin" /d:sonar.password="admin" 
 %pathMSBuild% %solutionName% /t:rebuild /v:q /nologo
 %pathSonarQubeExe% end /d:sonar.login="admin" /d:sonar.password="admin"
 
