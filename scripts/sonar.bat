@@ -8,6 +8,6 @@ set projectVersion=%4
 set branchName=%5
 
 %pathSonarQubeExe% begin /k:"%projectKey%" /n:"%projectName%" /v:"%projectVersion%" /d:sonar.nodejs.executable="%nodeJsExe%" /d:sonar.host.url="http://67.207.94.110:9000" /d:sonar.login="admin" /d:sonar.password="admin" 
-%pathMSBuild% %solutionName% /t:rebuild /v:q /nologo
+%pathMSBuild% %solutionName% 
 %pathSonarQubeExe% end /d:sonar.login="admin" /d:sonar.password="admin"
 
